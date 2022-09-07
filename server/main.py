@@ -12,9 +12,16 @@ app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 db = SQLAlchemy(app)
 
 
-class Language(db.Model):
-    id = db.Column(db.Iteger, primary_key=True)
-    name = db.Column(db.String())
+class User(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    username = db.Column(db.String(80), unique=True, nullable=False)
+    email = db.Column(db.String(120), unique=True, nullable=False)
+    observations = db.relationship('Observation', backref="author", lazy=True)
+
+
+class Observation(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    text = db.Column(db.String, nullable=True)
 
 
 db.create_all()
