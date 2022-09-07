@@ -1,2 +1,4 @@
 Flask
 Flask-Login
+python-dotenv
+flask-sqlalchemy
