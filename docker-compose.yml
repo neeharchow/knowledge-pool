@@ -6,7 +6,7 @@ services:
     ports:
       - "80:5000"
     volumes:
-      - ./server:/main
+      - ./server:/run
     environment:
       FLASK_ENV: development
       POSTGRES_DB: /server/${POSTGRES_DB}
