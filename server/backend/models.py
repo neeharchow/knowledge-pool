@@ -1,5 +1,5 @@
-from backend import db
 from datetime import datetime
+from backend import db
 
 
 class User(db.Model):
@@ -14,18 +14,23 @@ class User(db.Model):
         'Observation', backref="author", lazy=True)
     pools = db.relationship('Pool', backref="author", lazy=True)
 
+    def __repr__(self) -> str:
+        return f"User: {self.username}, {self.email}"
+
 
 class Observation(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     text = db.Column(db.Text, nullable=False)
 
-    pools = db.relationship('Pool', backref="pool", lazy=True)
+    # pools = db.relationship('Pool', backref="pool", lazy=True)
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
 
+    def __repr__(self):
+        return f"User: {self.id}, number of pools: {self.pools.length}"
 
 class Pool(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     text = db.Column(db.Text, nullable=False)
 
-    observations = db.relationship('Pool', backref="pool", lazy=True)
+    # observations = db.relationship('Pool', backref="pool", lazy=True)
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)

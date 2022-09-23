@@ -1,5 +1,5 @@
-from backend.models import User, Observation, Pool
 from backend import app
+from backend.models import User, Observation, Pool
 
 
 @app.route("/")
