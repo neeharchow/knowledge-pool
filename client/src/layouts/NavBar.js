@@ -7,25 +7,18 @@ import Button from '@mui/material/Button';
 
 function NavBar() {
   return (
-    <BarContainer>
-        <Bar>
-            <Stack style={{justifyContent: "center", alignItems: ""}} spacing={3} direction="row">
-                <Button style={{ height: "100%", color: "white"}} variant="text">Home</Button>
-                <Button style={{ height: "100%", color: "white"}} variant="text">Pools</Button>
-                <Button style={{ height: "100%", color: "white"}} variant="text">Oceans</Button>
-            </Stack>
-        </Bar>
-    </BarContainer>
+    <Bar>
+        <Stack style={{justifyContent: "left", marginLeft: "15px"}} spacing={3} direction="row">
+            <Button sx={{height: 50}} style={{ color: "white"}} variant="text">Dashboard</Button>
+            <Button sx={{height: 50}} style={{ color: "white"}} variant="text">Pools</Button>
+            <Button sx={{height: 50}} style={{ color: "white"}} variant="text">Oceans</Button>
+        </Stack>
+        
+    </Bar>
   )
 }
 
 export default NavBar
-
-const BarContainer = styled.div`
-    align-items: center;
-    width: 100%;
-    position: relative;
-`
 
 const Bar = styled.div`
     color: black;
