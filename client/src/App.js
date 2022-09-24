@@ -1,22 +1,25 @@
-import logo from "./logo.svg"
 import "./App.css"
 
 import React, { useState, useEffect } from "react"
 
+import NavBar from "./layouts/NavBar"
+
 function App() {
-	const [newData, setNewData] = useState([])
+	// const [newData, setNewData] = useState([])
 
-	const url = "/api"
+	// const url = "/api"
 
-	useEffect(() => {
-		fetch(url)
-			.then((res) => res.json())
-			.then((data) => {
-				setNewData(data)
-			})
-	}, [])
+	// useEffect(() => {
+	// 	fetch(url)
+	// 		.then((res) => res.json())
+	// 		.then((data) => {
+	// 			setNewData(data)
+	// 		})
+	// }, [])
 
-	return <div>{newData.message}</div>
+	// return <div>{newData.message}</div>
+
+	return <NavBar></NavBar>
 }
 
 export default App
