@@ -1,31 +1,17 @@
 import React from "react";
 import styled from "styled-components";
 
-import Ocean from "../components/Ocean";
-import Pool from "../components/Pool";
-import Dashboard from "../components/Dashboard";
-
-import { Routes, Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function NavBar() {
     return (
         <Bar>
-            <Routes>
-                <Navigation>
-                    <StyledButton>Dashboard</StyledButton>
-                    <StyledButton>Pools</StyledButton>
-                    <StyledButton>Oceans</StyledButton>
-                </Navigation>
-                <Route path="/ocean">
-                    <Ocean />
-                </Route>
-                <Route path="/pool">
-                    <Pool />
-                </Route>
-                <Route path="/">
-                    <Dashboard />
-                </Route>
-            </Routes>
+            <Navigation>
+                <StyledLink to="/">Dashboard</StyledLink>
+                <StyledLink to="/drops">Drops</StyledLink>
+                <StyledLink to="/pools">Pools</StyledLink>
+                <StyledLink to="/oceans">Oceans</StyledLink>
+            </Navigation>
         </Bar>
     );
 }
@@ -43,23 +29,22 @@ const Bar = styled.div`
 
     margin: 5px;
     height: 50px;
-    border-radius: 15px;
+    border-radius: 10px;
     background-color: #3c7dde;
 `;
 
-const StyledButton = styled.button`
+const StyledLink = styled(Link)`
+    padding: 10px;
     margin: 20px;
-    shadow: none;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     color: white;
-    variant: text;
+    text-decoration: none;
+    font-family: arial;
+    font-weight: bold;
     background-color: transparent;
     &:hover {
         background-color: #5988e0;
         cursor: pointer;
-    }
-    &:focus {
-        background-color: #7699e0;
     }
 `;
