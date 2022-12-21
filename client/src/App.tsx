@@ -9,7 +9,7 @@ import Drop from "./components/Drop";
 
 function App() {
   return (
-    <>
+    <div>
       <NavBar></NavBar>
       <Routes>
         <Route path="/" element={<Dashboard />}></Route>
@@ -17,7 +17,7 @@ function App() {
         <Route path="/pools" element={<Pool />}></Route>
         <Route path="/oceans" element={<Ocean />}></Route>
       </Routes>
-    </>
+    </div>
   );
 }
 
