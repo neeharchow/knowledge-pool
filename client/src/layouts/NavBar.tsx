@@ -1,6 +1,6 @@
 function NavBar() {
   return (
-    <nav className="navbar navbar-expand-lg bg-light px-3">
+    <nav className="navbar navbar-expand-lg px-3">
       <a className="navbar-brand" href="/dashboard">
         Knowledge Pool
       </a>

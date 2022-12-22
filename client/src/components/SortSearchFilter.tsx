@@ -1,7 +1,5 @@
-import React from "react";
-
 function SortSearchFilter() {
-  return <div>SortSearchFilter</div>;
+  return <div className="bg-gray-400 rounded-md">SortSearchFilter</div>;
 }
 
 export default SortSearchFilter;
