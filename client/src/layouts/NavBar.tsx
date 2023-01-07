@@ -7,7 +7,7 @@ function NavBar() {
       <div className=" navbar-collapse" id="navbarSupportedContent">
         <ul className="navbar-nav me-auto mb-lg-0">
           <li className="nav-item">
-            <a className="nav-link active" href="/dashboard">
+            <a className="nav-link active" href="/">
               Dashboard
             </a>
           </li>

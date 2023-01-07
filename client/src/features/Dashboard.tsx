@@ -1,5 +1,5 @@
-import SortSearchFilter from "../components/SortSearchFilter";
 import InfoViewer from "../components/InfoViewer";
+import DataPanel from "../components/DataPanel";
 
 import Split from "react-split";
 
@@ -17,9 +17,9 @@ function Dashboard() {
       style={splitStyles.parent}
       cursor="col-resize"
       gutterSize={10}
-      sizes={[30, 70]}
+      sizes={[40, 60]}
     >
-      <SortSearchFilter></SortSearchFilter>
+      <DataPanel></DataPanel>
       <InfoViewer></InfoViewer>
     </Split>
   );
