@@ -32,3 +32,170 @@ code {
   background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAFAQMAAABo7865AAAABlBMVEVHcEzMzMzyAv2sAAAAAXRSTlMAQObYZgAAABBJREFUeF5jOAMEEAIEEFwAn3kMwcB6I2AAAAAASUVORK5CYII=");
   cursor: row-resize;
 }
+
+.credibility-score-1 {
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  left: 129px;
+  top: 155px;
+
+  background: radial-gradient(
+    72.22% 100% at 26% 90%,
+    #bd00ff 50.96%,
+    #3c7dde 100%
+  );
+}
+
+/* credibility score 2 */
+
+.credibility-score-2 {
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  left: 158px;
+  top: 155px;
+
+  background: radial-gradient(
+    72.22% 100% at 26% 90%,
+    #ff00d6 28.8%,
+    #3c7dde 100%
+  );
+}
+/* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
+
+/* credibility score 3 */
+
+.credibility-score-3 {
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  left: 187px;
+  top: 155px;
+
+  background: radial-gradient(
+    72.22% 100% at 26% 90%,
+    #ff0000 7.72%,
+    #3c7dde 100%
+  );
+}
+/* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
+
+/* credibility score 4 */
+
+.credibility-score-4 {
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  left: 216px;
+  top: 155px;
+
+  background: radial-gradient(
+    72.22% 100% at 26% 90%,
+    #ff5c00 23.34%,
+    #3c7dde 100%
+  );
+}
+/* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
+
+/* credibility score 5 */
+
+.credibility-score-5 {
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  left: 245px;
+  top: 155px;
+
+  background: radial-gradient(
+    72.22% 100% at 26% 90%,
+    #ffb800 29.19%,
+    #3c7dde 100%
+  );
+}
+/* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
+
+/* credibility score 6 */
+
+.credibility-score-6 {
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  left: 274px;
+  top: 155px;
+
+  background: radial-gradient(
+    72.22% 100% at 26% 90%,
+    #faff00 36.43%,
+    #3c7dde 100%
+  );
+}
+/* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
+
+/* credibility score 7 */
+
+.credibility-score-7 {
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  left: 303px;
+  top: 155px;
+
+  background: radial-gradient(
+    72.22% 100% at 26% 90%,
+    #bdff00 36.43%,
+    #3c7dde 100%
+  );
+}
+/* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
+
+/* credibility score 8 */
+
+.credibility-score-8 {
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  left: 332px;
+  top: 155px;
+
+  background: radial-gradient(
+    72.22% 100% at 26% 90%,
+    #42ff00 36.43%,
+    #3c7dde 100%
+  );
+}
+/* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
+
+/* credibility score 9 */
+
+.credibility-score-9 {
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  left: 361px;
+  top: 155px;
+
+  background: radial-gradient(
+    72.22% 100% at 26% 90%,
+    #00ffc2 20.84%,
+    #3c7dde 100%
+  );
+}
+/* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
+
+/* credibility score 10 */
+
+.credibility-score-10 {
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  left: 390px;
+  top: 155px;
+
+  background: radial-gradient(
+    244.11% 338% at -44% 194%,
+    rgba(0, 133, 255, 0) 0%,
+    #3c7dde 53.65%
+  );
+}
+/* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */ ;

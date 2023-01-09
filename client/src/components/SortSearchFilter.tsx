@@ -1,20 +1,21 @@
 import { useState } from "react";
 
-function SortSearchFilter() {
-  const [isSortAscending, setIsSortAscending] = useState(true);
-
+function SortSearchFilter(props: any) {
   return (
     <div className="rounded-md m-1 flex flex-row space-x-1">
       <input
         type="text"
         className="shadow appearance-none rounded-l p-2 w-full text-gray-700 leading-tight"
         placeholder="Search"
+        onChange={(e) => {
+          props.setSearchInput(e.target.value);
+        }}
       />
       <button
         className="shadow p-2 text-gray-700 bg-gray-100 leading-tight"
-        onClick={() => setIsSortAscending(!isSortAscending)}
+        onClick={() => props.setIsSortAscending(!props.isSortAscending)}
       >
-        {isSortAscending ? (
+        {props.isSortAscending ? (
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"

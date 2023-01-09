@@ -1,8 +1,13 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import SortSearchFilter from "./SortSearchFilter";
+import DataCard from "./DataCard";
+import { dataSort, dataFilter, dictToArray } from "../utilities/utils";
 
 function DataPanel() {
-  const [data, setData] = useState({
+  const [searchInput, setSearchInput] = useState("");
+  const [isSortAscending, setIsSortAscending] = useState(true);
+
+  const initialData = {
     8999: {
       id: 8999,
       title: "Example Title",
@@ -39,13 +44,38 @@ function DataPanel() {
       dropNumber: 35,
       credibilityScore: 7,
     },
-  });
+  };
+
+  const [data, setData] = useState(dictToArray(initialData));
+
+  useEffect(() => {
+    setData(
+      dataFilter(
+        dataSort(data, isSortAscending),
+        searchInput
+      )
+
+    );
+  }, [searchInput, isSortAscending]);
 
   return (
     <div className="bg-gray-400 rounded-md mb-2 ml-2">
-      <SortSearchFilter></SortSearchFilter>
-      {data.map((item) => {
-        return <div>{item}</div>;
+      <SortSearchFilter
+        searchInput={searchInput}
+        setSearchInput={setSearchInput}
+        isSortAscending={isSortAscending}
+        setIsSortAscending={setIsSortAscending}
+      ></SortSearchFilter>
+      {data.map((value: any, index: any) => {
+        return (
+          <DataCard
+            key={index}
+            id={value.id}
+            title={value.title}
+            dropNumber={value.dropNumber}
+            credibilityScore={value.credibilityScore}
+          />
+        );
       })}
     </div>
   );
