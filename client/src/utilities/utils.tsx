@@ -1,12 +1,20 @@
 import _ from "lodash";
 
-export const dataSort = (arrayList: any[], isAscending: boolean) => {
-  return _.sortBy(arrayList, ["title"]);
+export const dataSort = (
+  arrayList: any[],
+  isAscending: boolean,
+  sortType: string
+) => {
+  const direction = isAscending ? "asc" : "desc";
+  return _.orderBy(arrayList, [sortType], [direction]);
 };
 
-export const dataFilter = (arrayList: any[], searchInput: string) => {
+export const dataSearch = (arrayList: any[], searchInput: string) => {
   return _.filter(arrayList, function (o) {
-    return o.title.includes(searchInput);
+    if (searchInput === "") {
+      return true;
+    }
+    return o.title.toLowerCase().includes(searchInput.toLowerCase());
   });
 };
 

@@ -11,8 +11,15 @@ function SortSearchFilter(props: any) {
           props.setSearchInput(e.target.value);
         }}
       />
-      <button
+      <select
         className="shadow p-2 text-gray-700 bg-gray-100 leading-tight"
+        onChange={(e) => props.setSortType(e.target.value)}
+      >
+        <option value="title">Title</option>
+        <option value="credibilityScore">Credibility</option>
+      </select>
+      <button
+        className="shadow p-2 text-gray-700 bg-gray-100 leading-tight rounded-r"
         onClick={() => props.setIsSortAscending(!props.isSortAscending)}
       >
         {props.isSortAscending ? (
@@ -43,7 +50,7 @@ function SortSearchFilter(props: any) {
           </svg>
         )}
       </button>
-      <button className="shadow rounded-r p-2 text-gray-700 bg-gray-100 leading-tight">
+      {/* <button className="shadow rounded-r p-2 text-gray-700 bg-gray-100 leading-tight">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
@@ -56,7 +63,7 @@ function SortSearchFilter(props: any) {
             clipRule="evenodd"
           />
         </svg>
-      </button>
+      </button> */}
     </div>
   );
 }

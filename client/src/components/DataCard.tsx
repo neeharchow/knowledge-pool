@@ -1,5 +1,4 @@
 function DataCard(props: any) {
-  console.log(props.credibilityScore);
   return (
     <div className="p-2 flex flex-row bg-white m-1 rounded-1 shadow appearance-none">
       <div
